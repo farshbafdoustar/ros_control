@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(joint_limits_interface)
 
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
 find_package(urdfdom REQUIRED)
 
 find_package(catkin REQUIRED COMPONENTS

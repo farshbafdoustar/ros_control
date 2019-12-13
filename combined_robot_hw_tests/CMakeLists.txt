@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(combined_robot_hw_tests)
 
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
 find_package(catkin REQUIRED COMPONENTS
   combined_robot_hw
   controller_manager
